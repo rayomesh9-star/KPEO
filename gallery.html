@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="See the PCEA gallery - coastal community projects, environmental conservation, volunteers, education, and beach cleanups.">
+  <meta property="og:title" content="Gallery | Pwani Circular Economy Association">
+  <meta property="og:type" content="website">
+  <title>Gallery | Pwani Circular Economy Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loader"></div>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="PCEA Home">
+        <div class="nav-logo-icon" aria-hidden="true">P</div>
+        <span>PCEA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#donate" class="nav-donate">Donate</a></li>
+      </ul>
+      <div class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#donate" class="btn btn-primary">Donate Now</a>
+    </div>
+  </nav>
+
+  <main>
+  <!-- Hero Banner -->
+  <header class="hero" style="min-height: 60vh;">
+    <img src="https://picsum.photos/seed/gallery-hero/1920/800" alt="Gallery" class="hero-background" loading="eager">
+    <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Visual Stories</span>
+      <h1>Our Work in Pictures</h1>
+      <p>Witness the impact we are creating across coastal Kenya through environmental conservation, education, and community development.</p>
+    </div>
+  </header>
+
+  <!-- Gallery Filters -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="subtitle">Moments of Impact</span>
+        <h2>Photo Gallery</h2>
+        <p>Browse through our collection of images capturing hope, hard work, and transformation.</p>
+      </div>
+      <div class="filter-buttons animate-fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="environment">Environment</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="community">Community</button>
+        <button class="filter-btn" data-filter="water">Water</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+        <button class="filter-btn" data-filter="beach">Beach Cleanup</button>
+        <button class="filter-btn" data-filter="volunteer">Volunteer</button>
+      </div>
+
+      <div class="gallery-grid animate-fade-up">
+        <div class="gallery-item" data-category="environment">
+          <img src="https://picsum.photos/seed/gal-env1/800/1000" alt="Mangrove planting" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Mangrove Planting</span>
+            <span class="gallery-category">Environment</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="https://picsum.photos/seed/gal-comm1/800/600" alt="Community gathering" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Village Assembly</span>
+            <span class="gallery-category">Community</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="education">
+          <img src="https://picsum.photos/seed/gal-edu1/800/700" alt="Students in class" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">New Classrooms</span>
+            <span class="gallery-category">Education</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="water">
+          <img src="https://picsum.photos/seed/gal-water1/800/900" alt="Water point" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Clean Water Access</span>
+            <span class="gallery-category">Water</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="beach">
+          <img src="https://picsum.photos/seed/gal-beach1/800/600" alt="Beach cleanup" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Beach Cleanup Drive</span>
+            <span class="gallery-category">Beach Cleanup</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="volunteer">
+          <img src="https://picsum.photos/seed/gal-vol1/800/800" alt="Volunteers working" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Volunteer Team</span>
+            <span class="gallery-category">Volunteer</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="agriculture">
+          <img src="https://picsum.photos/seed/gal-farm1/800/700" alt="Farm field" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Sustainable Farm</span>
+            <span class="gallery-category">Agriculture</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="education">
+          <img src="https://picsum.photos/seed/gal-edu2/800/600" alt="School children" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Scholarship Recipients</span>
+            <span class="gallery-category">Education</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="environment">
+          <img src="https://picsum.photos/seed/gal-env2/800/900" alt="Tree planting" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Reforestation Day</span>
+            <span class="gallery-category">Environment</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="water">
+          <img src="https://picsum.photos/seed/gal-water2/800/600" alt="Water well" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Borehole Construction</span>
+            <span class="gallery-category">Water</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="https://picsum.photos/seed/gal-comm2/800/800" alt="Community leaders" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Leadership Forum</span>
+            <span class="gallery-category">Community</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="volunteer">
+          <img src="https://picsum.photos/seed/gal-vol2/800/700" alt="Volunteers planting" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Volunteer Day</span>
+            <span class="gallery-category">Volunteer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="subtitle">Watch</span>
+        <h2>Video Stories</h2>
+        <p>Dive deeper into our impact through documentary-style videos and community testimonials.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card animate-fade-up" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--dark-text);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+              <div style="width: 60px; height: 60px; background: var(--primary-green); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 0.5rem;">&#9658;</div>
+              <p style="color: rgba(255,255,255,0.7);">PCEA Impact Story 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="card animate-fade-up delay-1" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--dark-text);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+              <div style="width: 60px; height: 60px; background: var(--ocean-blue); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 0.5rem;">&#9658;</div>
+              <p style="color: rgba(255,255,255,0.7);">Mangrove Restoration Documentary</p>
+            </div>
+          </div>
+        </div>
+        <div class="card animate-fade-up delay-2" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--dark-text);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+              <div style="width: 60px; height: 60px; background: var(--accent-orange); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 0.5rem;">&#9658;</div>
+              <p style="color: rgba(255,255,255,0.7);">Volunteer Experiences</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section animate-fade-up">
+        <h2>Be Part of the Story</h2>
+        <p>Join us as a volunteer, donor, or partner and help write the next chapter of coastal transformation.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-accent btn-lg">Get Involved</a>
+          <a href="projects.html" class="btn btn-secondary btn-lg">Our Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PCEA</h3>
+          <p>Pwani Circular Economy Association building sustainable coastal communities in Kenya.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#" aria-label="Facebook" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">F</a>
+            <a href="#" aria-label="Instagram" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">I</a>
+            <a href="#" aria-label="LinkedIn" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">L</a>
+            <a href="#" aria-label="Twitter" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">X</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Donation Policy</a></li>
+            <li><a href="#">Annual Reports</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p style="font-size:0.9rem;margin-bottom:1rem;">Get the latest updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" aria-label="Email for newsletter" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pwani Circular Economy Association (PCEA). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-content"><img src="" alt=""></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

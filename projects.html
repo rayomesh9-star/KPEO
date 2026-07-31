@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore PCEA's circular economy projects across the Kenyan coast - education, water, environment, food security, and youth empowerment initiatives.">
+  <meta property="og:title" content="Our Projects | Pwani Circular Economy Association">
+  <meta property="og:type" content="website">
+  <title>Projects | Pwani Circular Economy Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loader"></div>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="PCEA Home">
+        <div class="nav-logo-icon" aria-hidden="true">P</div>
+        <span>PCEA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#donate" class="nav-donate">Donate</a></li>
+      </ul>
+      <div class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#donate" class="btn btn-primary">Donate Now</a>
+    </div>
+  </nav>
+
+  <main>
+  <!-- Hero Banner -->
+  <header class="hero" style="min-height: 60vh;">
+    <img src="https://picsum.photos/seed/projects-hero/1920/800" alt="Projects" class="hero-background" loading="eager">
+    <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Our Work</span>
+      <h1>Transforming Communities Through Action</h1>
+      <p>Discover the projects driving positive change across education, water access, environment, and youth empowerment.</p>
+    </div>
+  </header>
+
+  <!-- Project Categories & Search -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="subtitle">Explore</span>
+        <h2>Our Projects</h2>
+      </div>
+      
+      <div style="max-width: 500px; margin: 0 auto 2rem;">
+        <div class="form-group" style="margin-bottom: 0;">
+          <input type="text" id="projectSearch" placeholder="Search projects by keyword..." style="width: 100%; padding: 1rem 1.25rem; border: 1px solid var(--gray-300); border-radius: 50px; font-family: var(--font-body); font-size: 0.95rem; background: var(--white); transition: all var(--transition);">
+        </div>
+      </div>
+
+      <div class="filter-buttons animate-fade-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="water">Water</button>
+        <button class="filter-btn" data-filter="environment">Environment</button>
+        <button class="filter-btn" data-filter="food">Food Security</button>
+        <button class="filter-btn" data-filter="youth">Youth Empowerment</button>
+        <button class="filter-btn" data-filter="waste">Waste Management</button>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card project-card animate-fade-up" data-category="water">
+          <img src="https://picsum.photos/seed/p-water/800/600" alt="Clean Water Project" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-active">Active</span>
+            <h3 class="card-title">Coastal Clean Water Initiative</h3>
+            <p class="card-text">Providing sustainable access to clean drinking water through solar-powered boreholes and rainwater harvesting systems across Kilifi and Lamu.</p>
+            <div class="card-meta"><span>📍</span> Kilifi County</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 68%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>68% Funded</span>
+              <span>2,040 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+
+        <article class="card project-card animate-fade-up delay-1" data-category="environment">
+          <img src="https://picsum.photos/seed/p-mangrove/800/600" alt="Mangrove Project" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-active">Active</span>
+            <h3 class="card-title">Mangrove Restoration Program</h3>
+            <p class="card-text">Restoring 500 hectares of degraded mangrove forests along the Kenyan coastline to protect biodiversity and coastal communities from erosion.</p>
+            <div class="card-meta"><span>📍</span> Lamu County</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 45%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>45% Funded</span>
+              <span>1,250 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+
+        <article class="card project-card animate-fade-up delay-2" data-category="education">
+          <img src="https://picsum.photos/seed/p-education/800/600" alt="Education Project" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-completed">Completed</span>
+            <h3 class="card-title">Girls Education Scholarship Fund</h3>
+            <p class="card-text">Full scholarships covering tuition, uniforms, and mentorship for 120 girls from low-income coastal communities to complete secondary education.</p>
+            <div class="card-meta"><span>📍</span> Kwale & Taita Taveta</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 100%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>100% Funded</span>
+              <span>120 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+
+        <article class="card project-card animate-fade-up" data-category="food">
+          <img src="https://picsum.photos/seed/p-farm/800/600" alt="Food Security Project" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-active">Active</span>
+            <h3 class="card-title">Coastal Farming Cooperatives</h3>
+            <p class="card-text">Establishing 12 farmer cooperatives using drought-resistant crops, drip irrigation, and climate-smart agriculture to boost food security.</p>
+            <div class="card-meta"><span>📍</span> Tana River County</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 55%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>55% Funded</span>
+              <span>850 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+
+        <article class="card project-card animate-fade-up delay-1" data-category="youth">
+          <img src="https://picsum.photos/seed/p-youth/800/600" alt="Youth Empowerment" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-active">Active</span>
+            <h3 class="card-title">Youth Green Entrepreneurship</h3>
+            <p class="card-text">Training 200 young people in green business skills, waste recycling technologies, and circular economy enterprise development.</p>
+            <div class="card-meta"><span>📍</span> Mombasa County</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 72%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>72% Funded</span>
+              <span>1,100 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+
+        <article class="card project-card animate-fade-up delay-2" data-category="waste">
+          <img src="https://picsum.photos/seed/p-waste/800/600" alt="Waste Management" class="card-image" loading="lazy">
+          <div class="card-body">
+            <span class="project-status status-active">Active</span>
+            <h3 class="card-title">Zero Waste Coastal Communities</h3>
+            <p class="card-text">Implementing community waste collection, segregation, and recycling facilities in 8 coastal villages to achieve zero-waste status by 2027.</p>
+            <div class="card-meta"><span>📍</span> Multiple Counties</div>
+            <div class="progress">
+              <div class="project-progress progress-bar" style="width: 38%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #78909C;">
+              <span>38% Funded</span>
+              <span>3,600 Beneficiaries</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Read More</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center gap-1" style="margin-top: 3rem;">
+        <button class="filter-btn active" aria-label="Page 1">1</button>
+        <button class="filter-btn" aria-label="Page 2">2</button>
+        <button class="filter-btn" aria-label="Page 3">3</button>
+        <button class="filter-btn" aria-label="Next page">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section animate-fade-up">
+        <h2>Support Our Projects</h2>
+        <p>Your donation directly funds community projects. Start a fundraising campaign or make a one-time gift today.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-accent btn-lg">Donate Now</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Volunteer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PCEA</h3>
+          <p>Pwani Circular Economy Association building sustainable coastal communities in Kenya.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#" aria-label="Facebook" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">F</a>
+            <a href="#" aria-label="Instagram" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">I</a>
+            <a href="#" aria-label="LinkedIn" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">L</a>
+            <a href="#" aria-label="Twitter" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">X</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Donation Policy</a></li>
+            <li><a href="#">Annual Reports</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p style="font-size:0.9rem;margin-bottom:1rem;">Get the latest updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" aria-label="Email for newsletter" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pwani Circular Economy Association (PCEA). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-content"><img src="" alt=""></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
