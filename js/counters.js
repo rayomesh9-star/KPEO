@@ -1,5 +1,5 @@
 /* ============================================
-   PCEA - ANIMATED COUNTERS
+   KPEO - ANIMATED COUNTERS
    ============================================ */
 
 class Counters {

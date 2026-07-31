@@ -1,5 +1,5 @@
 /* ============================================
-   PCEA - SCROLL ANIMATIONS
+   KPEO - SCROLL ANIMATIONS
    ============================================ */
 
 class ScrollAnimations {
