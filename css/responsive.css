@@ -267,6 +267,11 @@
     left: 0.2rem;
   }
 
+  .partner-logo {
+    display: block;
+    margin: 0 auto;
+  }
+
   img,
   video {
     max-width: 100%;
