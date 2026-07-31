@@ -105,6 +105,44 @@
     height: 200px;
   }
 
+  /* Fix horizontal overflow */
+  .hero-nav {
+    padding: 0 1rem;
+  }
+
+  .hero-nav button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -1.5rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline::before {
+    left: 0.25rem;
+  }
+
+  /* Prevent any element from causing horizontal scroll */
+  .container,
+  .card,
+  .feature-card,
+  .team-card,
+  .testimonial-card,
+  .social-card,
+  .contact-form,
+  .faq-item {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   /* Gallery masonry on mobile */
   .gallery-grid {
     column-count: 1;
@@ -202,6 +240,41 @@
 
   .section {
     padding: 3rem 0;
+  }
+
+  /* Ensure no horizontal scroll */
+  .hero-nav {
+    padding: 0 0.75rem;
+  }
+
+  .hero-nav button {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item::before {
+    left: -1.25rem;
+    width: 8px;
+    height: 8px;
+  }
+
+  .timeline::before {
+    left: 0.2rem;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .grid {
+    gap: 1.5rem;
   }
 }
 
