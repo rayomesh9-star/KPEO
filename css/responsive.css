@@ -34,6 +34,22 @@
     display: flex;
   }
 
+  .nav-container {
+    gap: 1rem;
+  }
+
+  .nav-logo-img {
+    height: 56px;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar.scrolled .nav-logo-img {
+    height: 48px;
+  }
+
   .grid-2,
   .grid-3,
   .grid-4 {
@@ -41,7 +57,16 @@
   }
 
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
+    padding-top: 8rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .hero-buttons {
@@ -104,12 +129,34 @@
     padding: 0 1rem;
   }
 
+  .nav-container {
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .nav-logo-img {
+    height: 44px;
+  }
+
+  .navbar {
+    padding: 0.4rem 0;
+  }
+
+  .navbar.scrolled .nav-logo-img {
+    height: 40px;
+  }
+
+  .hero {
+    padding-top: 7rem;
+    min-height: 100vh;
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .btn {
@@ -147,6 +194,14 @@
     right: 1.25rem;
     width: 40px;
     height: 40px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .section {
+    padding: 3rem 0;
   }
 }
 
