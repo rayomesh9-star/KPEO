@@ -741,18 +741,43 @@ p {
   color: #78909C;
 }
 
-/* Partner Logos */
-.partner-logo {
-  height: 60px;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all var(--transition);
-  object-fit: contain;
+/* Partner Carousel */
+.partners-carousel-wrap {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
-.partner-logo:hover {
+.partners-carousel {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  animation: partnersScroll 20s linear infinite;
+  width: max-content;
+}
+
+.partners-carousel:hover {
+  animation-play-state: paused;
+}
+
+.partners-carousel img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.partners-carousel img:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+@keyframes partnersScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Project Card Specifics */
