@@ -17,7 +17,6 @@ class App {
 
   init() {
     this.hideLoader();
-    this.initSearch();
   }
 
   hideLoader() {
@@ -47,24 +46,6 @@ class App {
     });
 
     images.forEach(img => imageObserver.observe(img));
-  }
-
-  initSearch() {
-    const searchInput = document.getElementById('projectSearch');
-    if (!searchInput) return;
-    
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase();
-      document.querySelectorAll('.project-card').forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const desc = card.querySelector('.card-text').textContent.toLowerCase();
-        if (title.includes(term) || desc.includes(term)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
   }
 }
 
