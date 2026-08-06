@@ -40,7 +40,7 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#donate" class="nav-donate">Donate</a></li>
+        <li><a href="#donate" class="nav-donate" id="mpesaNavBtn">Donate</a></li>
       </ul>
       
       <div class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
@@ -340,14 +340,14 @@
       </div>
       <div class="partners-carousel-wrap">
         <div class="partners-carousel">
-          <img src="https://picsum.photos/seed/partner1/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner2/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner3/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner4/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner1/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner2/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner3/300/150" alt="Partner" class="partner-logo" loading="lazy">
-          <img src="https://picsum.photos/seed/partner4/300/150" alt="Partner" class="partner-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
+          <img src="images/NBF-logo.jpg" alt="Nzikani Benevolent Foundation (NBF) logo" class="partner-logo nbf-logo" loading="lazy">
         </div>
       </div>
     </div>
@@ -359,7 +359,7 @@
       <h2>Ready to Make a Difference?</h2>
       <p>Your contribution helps us plant more trees, build schools, and empower more coastal communities. Together, we can build a circular future.</p>
       <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-accent btn-lg">Donate Now</a>
+        <button type="button" class="btn btn-accent btn-lg" id="mpesaBtn">Donate Now</button>
       </div>
     </div>
   </main>
@@ -429,6 +429,18 @@
     <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
     <div class="lightbox-content">
       <img src="" alt="" style="max-width:100%;max-height:80vh;border-radius:var(--radius-md);">
+    </div>
+  </div>
+
+  <!-- M-Pesa Modal -->
+  <div class="mpesa-modal-overlay" id="mpesaModal" aria-hidden="true">
+    <div class="mpesa-modal" role="dialog" aria-modal="true" aria-labelledby="mpesaModalTitle">
+      <button class="mpesa-modal-close" aria-label="Close modal">&times;</button>
+      <img src="images/mpesa.png" alt="M-Pesa Logo" class="mpesa-logo">
+      <h3 id="mpesaModalTitle">Donate via M-Pesa</h3>
+      <p class="mpesa-till-label">Till Number</p>
+      <p class="mpesa-till-number">4380149</p>
+      <p class="mpesa-instructions">Go to <strong>Lipa na M-Pesa</strong> &rarr; <strong>Buy Goods</strong> &rarr; Enter Till Number above</p>
     </div>
   </div>
 

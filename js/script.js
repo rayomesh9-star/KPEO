@@ -154,6 +154,46 @@ class HeroCarousel {
   }
 }
 
+/* ============================================
+   M-PESA MODAL
+   ============================================ */
+class MpesaModal {
+  constructor() {
+    this.btn = document.getElementById('mpesaBtn');
+    this.navBtn = document.getElementById('mpesaNavBtn');
+    this.modal = document.getElementById('mpesaModal');
+    this.close = this.modal?.querySelector('.mpesa-modal-close');
+    this.init();
+  }
+
+  init() {
+    this.btn?.addEventListener('click', () => this.open());
+    this.navBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.open();
+    });
+    this.close?.addEventListener('click', () => this.closeModal());
+    this.modal?.addEventListener('click', (e) => {
+      if (e.target === this.modal) this.closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.closeModal();
+    });
+  }
+
+  open() {
+    this.modal.classList.add('active');
+    this.modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.modal.classList.remove('active');
+    this.modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
 ready(() => {
   new App();
   new Navigation();
@@ -162,4 +202,5 @@ ready(() => {
   new ScrollAnimations();
   new Contact();
   new HeroCarousel();
+  new MpesaModal();
 });
