@@ -1050,7 +1050,6 @@ p {
 
 /* M-Pesa Modal */
 .mpesa-modal-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1058,14 +1057,18 @@ p {
   height: 100%;
   background: rgba(0,0,0,0.75);
   z-index: 3000;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.35s;
 }
 
 .mpesa-modal-overlay.active {
-  display: flex;
-  animation: fadeIn 0.3s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
 .mpesa-modal {
@@ -1077,7 +1080,12 @@ p {
   width: 100%;
   position: relative;
   box-shadow: var(--shadow-lg);
-  animation: zoomIn 0.3s ease;
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mpesa-modal-overlay.active .mpesa-modal {
+  transform: scale(1) translateY(0);
 }
 
 .mpesa-modal-close {

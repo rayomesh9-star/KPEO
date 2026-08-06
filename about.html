@@ -31,7 +31,7 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="index.html#donate" class="nav-donate" id="mpesaNavBtn">Donate</a></li>
+        <li><a href="index.html#donate" class="nav-donate mpesa-trigger">Donate</a></li>
       </ul>
       <div class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
         <span></span>
@@ -45,7 +45,7 @@
       <a href="projects.html">Projects</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
-      <a href="index.html#donate" class="btn btn-primary">Donate Now</a>
+      <a href="index.html#donate" class="btn btn-primary mpesa-trigger">Donate Now</a>
     </div>
   </nav>
 
@@ -597,10 +597,22 @@
       <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
       <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
       <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
-      <div class="lightbox-content"><img src="" alt=""></div>
-    </div>
+    <div class="lightbox-content"><img src="" alt=""></div>
+  </div>
 
-    <script src="js/script.js"></script>
+  <!-- M-Pesa Modal -->
+  <div class="mpesa-modal-overlay" id="mpesaModal" aria-hidden="true">
+    <div class="mpesa-modal" role="dialog" aria-modal="true" aria-labelledby="mpesaModalTitle">
+      <button class="mpesa-modal-close" aria-label="Close modal">&times;</button>
+      <img src="images/mpesa.png" alt="M-Pesa Logo" class="mpesa-logo">
+      <h3 id="mpesaModalTitle">Donate via M-Pesa</h3>
+      <p class="mpesa-till-label">Till Number</p>
+      <p class="mpesa-till-number">4380149</p>
+      <p class="mpesa-instructions">Go to <strong>Lipa na M-Pesa</strong> &rarr; <strong>Buy Goods</strong> &rarr; Enter Till Number above</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/counters.js"></script>
     <script src="js/animations.js"></script>

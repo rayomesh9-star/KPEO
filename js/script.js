@@ -60,7 +60,6 @@ class HeroCarousel {
     this.nextBtn = document.querySelector('.hero-next');
     this.currentIndex = 0;
     this.interval = null;
-    this.paused = false;
 
     if (!this.slides.length) return;
     this.init();
@@ -74,31 +73,12 @@ class HeroCarousel {
       dot?.addEventListener('click', () => this.goTo(idx));
     });
 
-    const hero = document.querySelector('.hero');
-    hero?.addEventListener('mouseenter', () => this.pause());
-    hero?.addEventListener('mouseleave', () => this.resume());
-    hero?.addEventListener('mousemove', (e) => this.handleMouseMove(e));
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prev();
       if (e.key === 'ArrowRight') this.next();
     });
 
     this.startAuto();
-  }
-
-  handleMouseMove(e) {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-    
-    const rect = hero.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    
-    const activeSlide = document.querySelector('.hero-slide.active .hero-background');
-    if (activeSlide) {
-      activeSlide.style.transform = `scale(1.08) translate(${x * -15}px, ${y * -15}px)`;
-    }
   }
 
   goTo(index) {
@@ -122,35 +102,16 @@ class HeroCarousel {
 
   next() {
     this.goTo(this.currentIndex + 1);
-    this.resetAuto();
   }
 
   prev() {
     this.goTo(this.currentIndex - 1);
-    this.resetAuto();
   }
 
   startAuto() {
     this.interval = setInterval(() => {
-      if (!this.paused) this.next();
+      this.next();
     }, 5000);
-  }
-
-  pause() {
-    this.paused = true;
-  }
-
-  resume() {
-    this.paused = false;
-    const activeSlide = document.querySelector('.hero-slide.active .hero-background');
-    if (activeSlide) {
-      activeSlide.style.transform = 'scale(1) translate(0, 0)';
-    }
-  }
-
-  resetAuto() {
-    clearInterval(this.interval);
-    this.startAuto();
   }
 }
 
@@ -159,18 +120,18 @@ class HeroCarousel {
    ============================================ */
 class MpesaModal {
   constructor() {
-    this.btn = document.getElementById('mpesaBtn');
-    this.navBtn = document.getElementById('mpesaNavBtn');
+    this.triggers = document.querySelectorAll('.mpesa-trigger');
     this.modal = document.getElementById('mpesaModal');
     this.close = this.modal?.querySelector('.mpesa-modal-close');
     this.init();
   }
 
   init() {
-    this.btn?.addEventListener('click', () => this.open());
-    this.navBtn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      this.open();
+    this.triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.open();
+      });
     });
     this.close?.addEventListener('click', () => this.closeModal());
     this.modal?.addEventListener('click', (e) => {
