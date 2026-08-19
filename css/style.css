@@ -761,7 +761,7 @@ p {
   display: flex;
   gap: 3rem;
   align-items: center;
-  animation: partnersScroll 20s linear infinite;
+  animation: partnersScroll 5s linear infinite;
   width: max-content;
 }
 
