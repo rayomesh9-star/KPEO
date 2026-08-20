@@ -4,4 +4,4 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /images/
 
-Sitemap: https://kpeo.org/sitemap.xml
+Sitemap: https://kpeo.co.ke/sitemap.xml
