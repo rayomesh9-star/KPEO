@@ -770,7 +770,7 @@ p {
 }
 
 .partners-carousel img {
-  height: 240px;
+  height: 300px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -791,7 +791,7 @@ p {
   filter: none;
   opacity: 1;
   transform: scale(1.1);
-  height: 80px;
+  height: 100px;
 }
 
 @keyframes partnersScroll {
