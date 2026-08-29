@@ -23,14 +23,16 @@ class App {
     const loader = document.querySelector('.loading-screen');
     const reveal = () => {
       if (loader) loader.classList.add('hidden');
-      document.body.classList.add('page-loaded');
+      const content = document.querySelector('main') || document.body;
+      content.classList.add('page-loaded');
     };
     if (loader) {
       window.addEventListener('load', () => {
         setTimeout(reveal, 500);
       });
     } else {
-      document.body.classList.add('page-loaded');
+      const content = document.querySelector('main') || document.body;
+      content.classList.add('page-loaded');
     }
   }
 

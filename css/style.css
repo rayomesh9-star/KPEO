@@ -1545,21 +1545,22 @@ p {
   animation: spin 1s linear infinite;
 }
 
-/* Page transition (smooth fade between pages) */
-.js body {
+/* Page transition (smooth fade between pages).
+   Fade <main> only so the loading screen/spinner stays fully visible. */
+.js main {
   opacity: 0;
   transition: opacity 0.5s ease;
   animation: pageFadeInFallback 0.6s ease 2s both;
 }
 
-.js body.page-loaded {
+.js main.page-loaded {
   opacity: 1;
   animation: none;
 }
 
-  body.page-fade-out {
-    opacity: 0 !important;
-  }
+body.page-fade-out {
+  opacity: 0 !important;
+}
 }
 
 /* Scroll progress indicator */
@@ -1586,8 +1587,8 @@ section[id] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js body,
-  .js body.page-loaded {
+  .js main,
+  .js main.page-loaded {
     opacity: 1 !important;
     animation: none !important;
     transition: none !important;
