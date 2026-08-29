@@ -21,10 +21,16 @@ class App {
 
   hideLoader() {
     const loader = document.querySelector('.loading-screen');
+    const reveal = () => {
+      if (loader) loader.classList.add('hidden');
+      document.body.classList.add('page-loaded');
+    };
     if (loader) {
       window.addEventListener('load', () => {
-        setTimeout(() => loader.classList.add('hidden'), 500);
+        setTimeout(reveal, 500);
       });
+    } else {
+      document.body.classList.add('page-loaded');
     }
   }
 
@@ -155,6 +161,32 @@ class MpesaModal {
   }
 }
 
+class PageTransition {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || link.target === '_blank' || link.hasAttribute('download')) return;
+
+      const url = new URL(link.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname) return;
+
+      link.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        const dest = link.href;
+        document.body.classList.add('page-fade-out');
+        setTimeout(() => { window.location.href = dest; }, 400);
+      });
+    });
+  }
+}
+
 ready(() => {
   new App();
   new Navigation();
@@ -164,4 +196,5 @@ ready(() => {
   new Contact();
   new HeroCarousel();
   new MpesaModal();
+  new PageTransition();
 });
