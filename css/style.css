@@ -1557,8 +1557,27 @@ p {
   animation: none;
 }
 
-body.page-fade-out {
-  opacity: 0 !important;
+  body.page-fade-out {
+    opacity: 0 !important;
+  }
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary-green), var(--ocean-blue), var(--accent-orange));
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+/* Keep anchor jumps clear of the fixed navbar */
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 @keyframes pageFadeInFallback {
@@ -1575,6 +1594,9 @@ body.page-fade-out {
   }
   body.page-fade-out {
     opacity: 1 !important;
+  }
+  .scroll-progress {
+    transition: none !important;
   }
 }
 

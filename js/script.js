@@ -187,6 +187,33 @@ class PageTransition {
   }
 }
 
+class ScrollProgress {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+    this.bar = bar;
+
+    this.update = this.update.bind(this);
+    window.addEventListener('scroll', this.update, { passive: true });
+    window.addEventListener('resize', this.update, { passive: true });
+    this.update();
+  }
+
+  update() {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const height = doc.scrollHeight - doc.clientHeight;
+    const pct = height > 0 ? (scrolled / height) * 100 : 0;
+    this.bar.style.width = pct + '%';
+  }
+}
+
 ready(() => {
   new App();
   new Navigation();
@@ -197,4 +224,5 @@ ready(() => {
   new HeroCarousel();
   new MpesaModal();
   new PageTransition();
+  new ScrollProgress();
 });
