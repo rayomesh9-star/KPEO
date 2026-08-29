@@ -143,9 +143,16 @@
     overflow-x: hidden;
   }
 
-  /* Gallery masonry on mobile */
+  /* Gallery grid on mobile */
   .gallery-grid {
-    column-count: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    column-count: unset;
+  }
+
+  .gallery-item {
+    margin-bottom: 0;
   }
 
   /* Filter buttons scroll */
