@@ -1355,6 +1355,8 @@ p {
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
   margin-bottom: 3rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-brand h3 {
@@ -1399,6 +1401,7 @@ p {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .footer-social .social-icon-btn {
